@@ -72,4 +72,54 @@ label start:
     dev "Enjoy the graphic contents and the mini-games!!"
     dev "It is also advised to wear earphone for immersed gameplay"
 
+    scene bg_ with dissolve
+    show char with movein
+    bro "Grandma, why is the well running dry? It’s so hot, and everyone looks worried!"
+    gran "I know, dear. The sun is relentless this summer, and we need to be careful with how we use our water. It's a real lesson for all of us."
+    bro "But what can we do to help? It feels like everyone is just waiting for the water to come back."
+    gran "Well, we can start by showing them how to conserve water. Small changes can make a big difference. Are you up for the challenge?"
+    bro "Absolutely! Let’s do something fun to get everyone excited about saving water!"
+    gran "That's the spirit, Leo! Together, we’ll turn this challenge into an adventure."
+
+    scene bg_ with dissolve
+    show char with movein
+    gran "Oh, it looks like it might rain soon! Let’s get the rain barrels ready, shall we?"
+    sis "Rain barrels? Why do we need those, Grandma? Isn’t there plenty of water in the well?"
+    gran "Not today, my dear. We’ll use the rainwater to water the plants and wash up later. Every drop counts, especially now that the well is running low."
+    sis "But it’s just rain. How can that help us?"
+    gran "You’ll see. Every time it rains, we can collect enough water to last us for days. It’s like nature’s gift."
+    sis "I see! Can I help?"
+    gran "Of course! You can hold the funnel while I position the barrels."
+    sis "Yay! Let’s catch that rain!"
+
+    scene bg_ with dissolve
+    show char with movein
+    gran "Look at this mess. People forget that littering here affects our water supply."
+    sis "But it’s just a little garbage. It won't make that much difference, right?"
+    gran "Every little bit adds up. See all this? It ends up in the river and makes the water dirty. If we clean it up, we help our river stay healthy."
+    sis "Alright, I’ll help! This looks bad."
+    gran "Thank you, sweetheart! Remember, clean water is precious. If we don’t take care of it, we won’t have it when we need it."
+    sis "I’ll tell my friends to help next time too!"
+
+    scene bg_ with dissolve
+    show char with movein
+    gran "Oh dear, look at this! What a waste of water!"
+    sis "What can we do, Grandma?"
+    gran "We need to connect these broken pipes—the water that’s leaking here could fill our barrels many times!"
+    sis "But it looks complicated. Can we fix it?"
+    gran "Of course, we can try! It may take some work, but working together is the best way to learn."
+    sis "Let’s do it! I want to help save the water!"
+    gran "That’s the spirit. Remember, every effort we make today ensures we'll have clean water for tomorrow!"
+
+    scene bg_ with dissolve
+    show char with movein
+    sis "Look, Grandma! We got so much rainwater!"
+    gran "Yes, we did, darling. It’s all because we took the time to collect it."
+    sis "And we cleaned the river and fixed the pipes. I get it now! Water is super important!"
+    gran "Exactly! It’s our responsibility to conserve it."
+    sis "I’m going to tell everyone in the village how we can save water!"
+    gran "That’s wonderful! We can all be guardians of our precious water. Let's promise to keep learning and sharing what we know."
+    sis "I promise, Grandma! Together, we’ll make a difference!"
+
+
     jump story1

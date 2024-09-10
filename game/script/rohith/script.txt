@@ -1,0 +1,12 @@
+Characters Leo/Luna , Gran
+
+
+gran "Oh, Hey there. Welcome to Aqua-Quest"
+gran "A game made for the sole purpose of teaching children about water management!!"
+gran "Enjoy the graphic contents and the mini-games!!"
+
+Leo "Grandma, why is the well running dry? It’s so hot, and everyone looks worried!"
+gran "I know, dear. The sun is relentless this summer, and we need to be careful with how we use our water."
+gran "It's a real lesson for all of us."
+
+Leo ""

@@ -3,6 +3,23 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+label splashscreen:
+    scene black
+    with Pause(1)
+
+    show text "Team 8 Interactive Productions Presents" with dissolve
+    with Pause(2)
+
+    hide text with dissolve
+    with Pause(1)
+
+    show text "Rights-Quest" with dissolve
+    with Pause(2)
+
+    hide text with dissolve
+    with Pause(1)
+    return
+
 #blur fn
 image devchar = At('dev', sprite_highlight('dev'))
 
@@ -52,5 +69,7 @@ label start:
     dev "A game made for the sole purpose of teaching children about water management!!"
     dev "Enjoy the graphic contents and the mini-games!!"
     dev "It is also advised to wear earphone for immersed gameplay"
+
+    jump story1
 
     return

@@ -46,5 +46,11 @@ define mrwick = Character("Mr.Wick", image = 'mrwickchar', callback=name_callbac
 
 label start:
 
+    scene bg_dev with advtrans1
+    show devchar with moveinright
+    dev "Oh, Hey there. Welcome to Aqua-Quest"
+    dev "A game made for the sole purpose of teaching children about water management!!"
+    dev "Enjoy the graphic contents and the mini-games!!"
+    dev "It is also advised to wear earphone for immersed gameplay"
 
     return

@@ -3,17 +3,19 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+default points=0
+
 label splashscreen:
     scene black
     with Pause(1)
 
-    show text "Team 8 Interactive Productions Presents" with dissolve
+    show text "{b}Tech Titans Presents{/b}" with dissolve
     with Pause(2)
 
     hide text with dissolve
     with Pause(1)
 
-    show text "Rights-Quest" with dissolve
+    show text "Aqua-Quest" with dissolve
     with Pause(2)
 
     hide text with dissolve
@@ -71,5 +73,3 @@ label start:
     dev "It is also advised to wear earphone for immersed gameplay"
 
     jump story1
-
-    return

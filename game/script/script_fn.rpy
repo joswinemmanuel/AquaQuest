@@ -208,11 +208,11 @@ init python:
                 depth_speed = 1.5-depth/(self.depth+0.0)
                 
                 return [ SnowParticle(self.image[depth-1],      # the image used by the particle 
-                                      random.uniform(-self.wind, self.wind)*depth_speed,  # wind's force
-                                      self.speed*depth_speed,  # the vertical speed of the particle
-                                      random.randint(self.xborder[0], self.xborder[1]), # horizontal border
-                                      random.randint(self.yborder[0], self.yborder[1]), # vertical border
-                                      ) ]
+                random.uniform(-self.wind, self.wind)*depth_speed,  # wind's force
+                self.speed*depth_speed,  # the vertical speed of the particle
+                random.randint(self.xborder[0], self.xborder[1]), # horizontal border
+                random.randint(self.yborder[0], self.yborder[1]), # vertical border
+                ) ]
         
         
         def image_init(self, image):

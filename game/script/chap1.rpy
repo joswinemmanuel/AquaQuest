@@ -6,3 +6,12 @@ label story1:
     sis "Hello granny"
     sis "Such a good day right"
     gran "It would have been a better day if there was rain my child..."
+    $points=points+30
+    jump retry
+    
+    if points>50: #out of 100
+        jump passed
+    elif points>25:
+        jump retry
+    else:
+        jump game_over

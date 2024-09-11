@@ -1,4 +1,4 @@
-﻿init:   
+init:
     image bg background = im.Scale("images/bucket_minigame/background1.jpg", 1920, 1080)
     
     python:
@@ -123,6 +123,7 @@
                 self.milliseconds = 0
                 
                 self.gameover = False
+                self.game_over = False
             # __init__
             
             def event( self, event, x, y, shownTimebase ):
@@ -207,12 +208,9 @@
                         textRender = renpy.render( txt, 800, 600, shownTimebase, animationTimebase )
                         renderer.blit( textRender, ( 0, 10 * counter ) )
                         counter += 1
-                
-                else: #Gameover
-                    # Temporary
-                    txt = Text( _( "Game Over" ), size=40 )
-                    renderer.blit( renpy.render( txt, 1600, 900, shownTimebase, animationTimebase ), ( 850, 500 ) )
-                       
+                else:  # Gameover
+                    self.game_over = True # Jump to the game-over label
+                                       
                        
                 txtScore = Text( _( "Time : " + str( self.countdown ) ), size=20 )
                 renderer.blit( renpy.render( txtScore, 1600, 900, shownTimebase, animationTimebase ), ( 1820, 0 ) )
@@ -225,6 +223,9 @@
                 
                 return renderer
             # render
+
+            def is_game_over(self):
+                return self.game_over
             
             def per_interact( self ):
                 renpy.timeout( 0 )
@@ -238,8 +239,6 @@
                 delta = shownTimebase - self.lastStart
                 self.lastStart = shownTimebase
                 
-        
-                
                 return delta
             # updateRate
         # FishCatcherGame
@@ -250,10 +249,15 @@ label fish_catcher:
     scene bg background
     with fade
     
-    python:
-        ui.add( FishCatcherGame() )
-        ui.interact( suppress_overlay=True, suppress_underlay=True )
+    $ game = FishCatcherGame()
+    $ ui.add(game)
+    $ ui.interact(suppress_overlay=True, suppress_underlay=True)
 
+    if game.is_game_over():
+        jump water_buck_over
 
-label start:
-    jump fish_catcher
+label water_buck_over:
+    scene bg_white with dissolve
+    show grannychar at right with moveinright
+    gran "Well done, you've collected [points] points from the mini-game"
+    pass

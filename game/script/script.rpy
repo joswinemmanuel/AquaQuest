@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-default points=0
+define points=0
 
 label splashscreen:
     scene black
@@ -65,8 +65,6 @@ define mrwick = Character("Mr.Wick", image = 'mrwickchar', callback=name_callbac
 
 label start:
 
-    play music "main-menu-music.mp3"
-
     scene bg_dev with advtrans1
     show devchar with moveinright
 
@@ -74,6 +72,14 @@ label start:
     dev "A game made for the sole purpose of teaching children about water management!!"
     dev "Enjoy the graphic contents and the mini-games!!"
     dev "It is also advised to wear earphone for immersed gameplay"
+    menu:
+        dev "Before we start would you like to [points]:"
+
+        "Progress Only with the Games":
+            jump only_games
+
+        "Progress Along with Story Mode":
+            pass
 
     scene bg_white with dissolve
     show brochar at right with moveinright
@@ -97,6 +103,8 @@ label start:
     gran "Of course! You can hold the funnel while I position the barrels."
     sis "Yay! Let’s catch that rain!"
 
+    jump fish_catcher
+
     scene bg_white with dissolve
     show grannychar at left with moveinleft
     gran "Look at this mess. People forget that littering here affects our water supply."
@@ -106,6 +114,8 @@ label start:
     sis "Alright, I’ll help! This looks bad."
     gran "Thank you, sweetheart! Remember, clean water is precious. If we don’t take care of it, we won’t have it when we need it."
     sis "I’ll tell my friends to help next time too!"
+
+    #jump
 
     scene bg_black with dissolve
     show grannychar at left with moveinleft

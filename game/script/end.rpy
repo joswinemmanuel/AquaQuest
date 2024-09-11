@@ -1,5 +1,6 @@
+default re_point = 0
+
 label retry:
-    $points=0
     scene bg_dev with dissolve
     show devchar at center with moveinleft
     dev "So..."
@@ -14,7 +15,7 @@ label retry:
 
         "Collect the rain water for later use":
             dev "Well well, you got it right"
-            $points=points+10
+            $re_point=re_point+10
 
         "Go sleep under the blanket":
             dev "Got a funny bone huh?"
@@ -33,7 +34,7 @@ label retry:
 
         "Throw it into the dustbin":
             dev "Impressive, that's the right thing to do!!"
-            $points=points+10
+            $re_point=re_point+10
 
     menu:
         dev "If a leak is found, we..."
@@ -46,19 +47,24 @@ label retry:
 
         "Throw it into the dustbin":
             dev "Impressive, that's the right thing to do!!"
-            $points=points+10
+            $re_point=re_point+10
     
 
-    dev "Well you got [points]/20"
+    dev "Well you got [re_point]/30"
+    if re_point > 15:
+        jump passed
+    else:
+        jump game_over
 
 
 ###################################################################################################################################
 
 label game_over:
-    "Game Over!!"
     #have not passed with succifienct score
     scene bg_gameover with fade:
         pause (1.0)
+    "You have died of dehydration, Try again"
+    jump start
 
 ###################################################################################################################################
 
@@ -67,3 +73,5 @@ label passed:
     #succesfully passed with the highscore
     scene bg_end with fade:
         pause (1.0)
+    "You have survived the drought!! Well Done"
+    return

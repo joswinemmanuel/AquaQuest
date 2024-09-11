@@ -4,6 +4,7 @@
 # name of the character.
 
 define points=0
+define only_game_var = False
 
 label splashscreen:
     scene black
@@ -76,12 +77,13 @@ label start:
         dev "Before we start would you like to [points]:"
 
         "Progress Only with the Games":
+            $only_game_var=True
             jump only_games
 
         "Progress Along with Story Mode":
             pass
 
-    scene bg_white with dissolve
+    scene white with dissolve
     show brochar at right with moveinright
     bro "Grandma, why is the well running dry? It’s so hot, and everyone looks worried!"
     show grannychar at left with moveinleft
@@ -91,7 +93,7 @@ label start:
     bro "Absolutely! Let’s do something fun to get everyone excited about saving water!"
     gran "That's the spirit, Leo! Together, we’ll turn this challenge into an adventure."
 
-    scene bg_black with dissolve
+    scene black with dissolve
     show grannychar at right with moveinright
     gran "Oh, it looks like it might rain soon! Let’s get the rain barrels ready, shall we?"
     show sischar at left with moveinleft
@@ -104,8 +106,10 @@ label start:
     sis "Yay! Let’s catch that rain!"
 
     jump fish_catcher
+    label s1:
+        pass
 
-    scene bg_white with dissolve
+    scene white with dissolve
     show grannychar at left with moveinleft
     gran "Look at this mess. People forget that littering here affects our water supply."
     show sischar at right with moveinright
@@ -115,9 +119,11 @@ label start:
     gran "Thank you, sweetheart! Remember, clean water is precious. If we don’t take care of it, we won’t have it when we need it."
     sis "I’ll tell my friends to help next time too!"
 
-    #jump
+    jump waste_game
+    label s2:
+        pass
 
-    scene bg_black with dissolve
+    scene black with dissolve
     show grannychar at left with moveinleft
     gran "Oh dear, look at this! What a waste of water!"
     show sischar at right with moveinright
@@ -128,7 +134,11 @@ label start:
     sis "Let’s do it! I want to help save the water!"
     gran "That’s the spirit. Remember, every effort we make today ensures we'll have clean water for tomorrow!"
 
-    scene bg_white with dissolve
+    #jump game
+    label s3:
+        pass
+
+    scene white with dissolve
     show sischar at right with moveinright
     sis "Look, Grandma! We got so much rainwater!"
     show grannychar at left with moveinleft

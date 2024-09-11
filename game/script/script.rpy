@@ -39,7 +39,6 @@ image userchar = At('no_char', sprite_highlight('me'))
 image santachar = At('santa', sprite_highlight('santa'))
 image santachar_shadow = At('santa_shadow', sprite_highlight('santa'))
 
-
 image bullychar = At('bully', sprite_highlight('bully'))
 
 image mrsgraychar = At('mrsgray', sprite_highlight('mrsgray'))
@@ -61,6 +60,10 @@ define storeowner = Character("Store Owner", image='storeownerchar',callback=nam
 define mrsgray = Character("Mrs.Gray", image='mrsgraychar',callback=name_callback, cb_name='mrsgray')
 define mrwick = Character("Mr.Wick", image = 'mrwickchar', callback=name_callback, cb_name='mrwick')
 
+#raindrops
+
+image rain1 = Fixed(SnowBlossom("gui/water1.png", 3000, xspeed=(600, 800), yspeed=(3000, 4000), start=3000))
+
 
 # The game starts here.
 
@@ -68,6 +71,7 @@ label start:
     $points = 0
 
     scene bg_dev with advtrans1
+    show rain1
     show devchar with moveinright
 
     dev "Oh, Hey there. Welcome to Aqua-Quest"
@@ -85,6 +89,7 @@ label start:
             pass
 
     scene bg_village with dissolve
+    show rain1
     show brochar at right with moveinright
     bro "Grandma, why is the well running dry? It’s so hot, and everyone looks worried!"
     show grannychar at left with moveinleft
@@ -95,6 +100,7 @@ label start:
     gran "That's the spirit, Keith! Together, we’ll turn this challenge into an adventure."
 
     scene rain with dissolve
+    show rain1
     show grannychar at right with moveinright
     gran "Oh, it looks like it might rain soon! Let’s get the rain barrels ready, shall we?"
     show sischar at left with moveinleft

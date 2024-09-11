@@ -238,7 +238,7 @@ label fish_catcher:
 
 
 label water_buck_over:
-    scene bg_ with dissolve
+    scene rain with dissolve
     show grannychar at right with moveinright
     gran "Well done, you've collected [points] points from the mini-game"
     play music "main-menu-music.mp3"

@@ -65,6 +65,7 @@ define mrwick = Character("Mr.Wick", image = 'mrwickchar', callback=name_callbac
 # The game starts here.
 
 label start:
+    $points = 0
 
     scene bg_dev with advtrans1
     show devchar with moveinright
@@ -83,7 +84,7 @@ label start:
         "Progress Along with Story Mode":
             pass
 
-    scene white with dissolve
+    scene bg_village with dissolve
     show brochar at right with moveinright
     bro "Grandma, why is the well running dry? It’s so hot, and everyone looks worried!"
     show grannychar at left with moveinleft
@@ -91,9 +92,9 @@ label start:
     bro "But what can we do to help? It feels like everyone is just waiting for the water to come back."
     gran "Well, we can start by showing them how to conserve water. Small changes can make a big difference. Are you up for the challenge?"
     bro "Absolutely! Let’s do something fun to get everyone excited about saving water!"
-    gran "That's the spirit, Leo! Together, we’ll turn this challenge into an adventure."
+    gran "That's the spirit, Keith! Together, we’ll turn this challenge into an adventure."
 
-    scene black with dissolve
+    scene rain with dissolve
     show grannychar at right with moveinright
     gran "Oh, it looks like it might rain soon! Let’s get the rain barrels ready, shall we?"
     show sischar at left with moveinleft
@@ -108,8 +109,13 @@ label start:
     jump fish_catcher
     label s1:
         pass
+    
+    show sischar at left with moveinleft
+    sis "Look, Grandma! We got so much rainwater!"
+    gran "Yes, we did, darling. It’s all because we took the time to collect it."
 
-    scene white with dissolve
+
+    scene bg_river with dissolve
     show grannychar at left with moveinleft
     gran "Look at this mess. People forget that littering here affects our water supply."
     show sischar at right with moveinright
@@ -123,7 +129,7 @@ label start:
     label s2:
         pass
 
-    scene black with dissolve
+    scene bg_river with dissolve
     show grannychar at left with moveinleft
     gran "Oh dear, look at this! What a waste of water!"
     show sischar at right with moveinright
@@ -138,11 +144,9 @@ label start:
     label s3:
         pass
 
-    scene white with dissolve
+    scene drought with dissolve
     show sischar at right with moveinright
-    sis "Look, Grandma! We got so much rainwater!"
     show grannychar at left with moveinleft
-    gran "Yes, we did, darling. It’s all because we took the time to collect it."
     sis "And we cleaned the river and fixed the pipes. I get it now! Water is super important!"
     gran "Exactly! It’s our responsibility to conserve it."
     sis "I’m going to tell everyone in the village how we can save water!"

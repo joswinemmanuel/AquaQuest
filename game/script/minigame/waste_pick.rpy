@@ -114,13 +114,13 @@ screen drag_and_drop:
                 child "drop_box"
 
 label waste_over:
-    scene bg_ with dissolve
+    scene bg_river with dissolve
     show grannychar at left with moveinleft
     gran "You have done well in collecting all the waste in the river"
     play music "main-menu-music.mp3"
+    $points=points+25
     if only_game_var==True:
         jump l2
-        $points=points+25
     else:
         jump s2
 

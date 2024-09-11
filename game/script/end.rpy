@@ -39,15 +39,16 @@ label retry:
     menu:
         dev "If a leak is found, we..."
 
-        "Throw it into a water body":
-            dev "No No No, thats the last thing you should do!!!"
-
-        "Throw it on the ground":
-            dev "Why not just throw it into the dustbin then?"
-
-        "Throw it into the dustbin":
-            dev "Impressive, that's the right thing to do!!"
+        "Fix it ASAP":
+            dev "I expect nothing less from you!!!"
             $re_point=re_point+10
+
+        "Throw a rain dance party":
+            dev "Not the right answer but can I get invited?"
+
+        "Sleep and hope it gets magically repaired tommorow":
+            dev "Might be the next best thing tbh..."
+            
     
 
     dev "Well you got [re_point]/30"

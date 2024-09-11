@@ -107,7 +107,7 @@ init:
                 self.frameRate = 90
                 
                 self.clock = pygame.time.Clock()
-                self.countdown = 10
+                self.countdown = 25
                 self.milliseconds = 0
                 
                 self.gameover = False
@@ -230,6 +230,7 @@ screen fish_catcher_screen(game):
 
 # Label to start the fish catcher game
 label fish_catcher:
+    play music "Game.mp3"
     $ game = FishCatcherGame()
     call screen fish_catcher_screen(game=game)
     $ points = game.player.score  # Store the score
@@ -240,6 +241,8 @@ label water_buck_over:
     scene bg_ with dissolve
     show grannychar at right with moveinright
     gran "Well done, you've collected [points] points from the mini-game"
+    play music "main-menu-music.mp3"
+    $points=points*2
     if only_game_var==True:
         jump l1
     else:
